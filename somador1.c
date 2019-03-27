@@ -1,6 +1,3 @@
-
-// PRINTF
-#include "gap_common.h"
 // FEATURE_CLUSTER
 #include "gap_cluster.h"
 #include "gap_dmamchan.h"
@@ -9,9 +6,9 @@
 #define CORE_NUMBER      8
 int soma=0;
 //srand(time(NULL));
-void Soma(void *arg) {
+void Soma(int *data) {
      #include <time.h>
-
+	for (int i=0;i<
 	int a=rand();
 	srand(a);
 	int microsoma=0;
