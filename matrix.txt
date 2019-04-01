@@ -1,0 +1,56 @@
+/opt/gap_sdk/tools/runner/run_gapuino.sh -v 1
+
+
+[32m          ,ad8888ba,        db        88888888ba  [0m ad88888ba   
+[32m         d8"'    `"8b      d88b       88      "8b[0m d8"     "8b  
+[32m        d8'               d8'`8b      88      ,8P[0m Y8a     a8P  
+[32m        88               d8'  `8b     88aaaaaa8P' [0m "Y8aaa8P"   
+[32m        88      88888   d8YaaaaY8b    88""""""'  [0m  ,d8"""8b,   
+[32m        Y8,        88  d8""""""""8b   88       [0m   d8"     "8b  
+[32m         Y8a.    .a88 d8'        `8b  88        [0m  Y8a     a8P  
+[32m          `"Y88888P" d8'          `8b 88         [0m  "Y88888P"   [0m
+
+---------------------------------GAPUINO------------------------------------
+
+Cable state change connected
+Bridge init - log level 0
+FC Frequency: 288 MHz - Cluster Frequency: 199 MHz - Voltage: 1200 mV
+Caotrng...
+4 - FirstRow: 12 - LastRow: 14
+Core 0 - FirstRow: 0 - LastRow: 2
+Core 1 - FirstRow: 3 - LastRow: 5
+Core 2 - FirstRow: 6 - LastRow: 8
+Core 3 - FirstRow: 9 - LastRow: 11
+Core 5 - FirstRow: 15 - LastRow: 17
+Core 6 - FirstRow: 18 - LastRow: 20
+Core 7 - FirstRow: 21 - LastRow: 23
+The matrix is
+9 6 1 8 3 5 2 4 0 3 
+4 6 7 7 9 7 6 3 8 5 
+7 5 7 7 9 1 1 3 0 6 
+9 9 8 1 4 0 9 2 6 9 
+8 4 9 7 6 9 4 6 0 3 
+2 4 4 8 5 0 6 4 4 7 
+3 8 7 6 5 3 3 7 4 5 
+6 7 0 4 7 3 4 7 4 4 
+2 2 7 9 2 0 5 5 9 3 
+5 0 5 7 5 8 2 5 3 2 
+9 2 3 3 7 7 6 6 3 8 
+1 7 5 9 1 1 6 6 9 4 
+9 2 3 3 0 2 2 7 2 8 
+5 3 7 6 6 2 5 5 4 7 
+8 4 3 2 0 7 7 9 5 9 
+1 8 2 9 4 7 9 8 0 7 
+3 2 4 0 9 6 9 1 8 8 
+8 0 5 1 8 0 4 2 5 5 
+3 8 7 8 8 9 9 1 5 0 
+7 3 5 8 5 1 3 0 4 5 
+8 0 5 6 5 2 4 4 0 5 
+5 1 6 7 6 0 8 6 8 2 
+8 8 3 6 8 7 1 7 2 1 
+5 9 2 0 7 8 7 7 8 2 
+The vector is
+4 1 0 5 9 8 9 1 3 2 
+The product is
+177 285 181 205 245 181 175 201 156 200 257 168 116 199 207 252 265 172 301 173 173 216 222 254 
+commands completed
