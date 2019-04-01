@@ -132,8 +132,8 @@ void generate_data(){
 int main() {
 
     FLL_SetFrequency(uFLL_SOC, FC_FREQ, 0);
-    m = 24;
-    n = 10;
+    m = 48;
+    n = 27;
 
     A = malloc(m*n*sizeof(int));
     x = malloc(n*sizeof(int));
