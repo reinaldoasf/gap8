@@ -1,6 +1,6 @@
 # User Test
 #------------------------------------------
-TEST_C          = test.c
+TEST_C          =mat_mult_gap8.c
 
 # For RTOS Jenkins test, it will never finished so add a jenkins test Flag to exit().
 MBED_FLAGS     +=-DJENKINS_TEST_FLAG=1

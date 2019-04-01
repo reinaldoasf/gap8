@@ -1,7 +1,7 @@
 #include "cmsis.h"
 #include "gap_common.h"
 #include "mbed_wait_api.h"
-
+#include <stdio.h>
 // FEATURE_CLUSTER
 #include "gap_cluster.h"
 #include "gap_dmamchan.h"
@@ -46,24 +46,25 @@ void Master_Entry(int * L1_mem)
 
 
 
-int main()
+int main(int argc, char argv[])
 {
 	long       thread;
    int* thread_handles;
 
-   if (argc != 2) Usage(argv[0]);
-   thread_count = atoi(argv[1]);
-   thread_handles = malloc(thread_count*sizeof(int);
+   //if (argc != 2) Usage(argv[0]);
+   thread_count =atoi(argv[1]); 
+   thread_handles = malloc(thread_count*sizeof(int));
 
 
-	printf("Enter m and n\n");
-	scanf("%d%d", &m, &n);
+   //int	m, n;
+   m = argv[2];
+   n = argv[3];
    A = malloc(m*n*sizeof(double));
    x = malloc(n*sizeof(double));
    y = malloc(m*sizeof(double));
    
    Read_matrix("Enter the matrix", A, m, n);
-   Print_matrix("We read", A, m, n);
+		   Print_matrix("We read", A, m, n);
 
    Read_vector("Enter the vector", x, n);
    Print_vector("We read", x, n);
@@ -80,23 +81,23 @@ int main()
 	printf("FC Frequency: %d MHz - Cluster Frequency: %d MHz - Voltage: %lu mV\n",
 		    FLL_GetFrequency(uFLL_SOC)/F_DIV, FLL_GetFrequency(uFLL_CLUSTER)/F_DIV, current_voltage());
 
-	CLUSTER_SendTask(0, Master_Entry, (void *) thread_hanles[thread], 0);
+	CLUSTER_SendTask(0, Master_Entry, (void *) thread_handles[thread], 0);
 	    printf("Waiting...\n");
 
 	CLUSTER_Wait(0);
-   for (thread = 0; thread < thread_count; thread++)
+/*   for (thread = 0; thread < thread_count; thread++)
       pthread_create(&thread_handles[thread], NULL,
          Pth_mat_vect, (void*) thread);
-
+*/
 	CLUSTER_Wait(0);
 
    Print_vector("The product is", y, m);
 
 
-	for (int i = 0; i < 8; i++) {
-	count += L1_mem[i];
-	printf("CORE %d - count = %d\n", i, L1_mem[i]);
-	}
+//	for (int i = 0; i < 8; i++) {
+//	count += L1_mem[i];
+//	printf("CORE %d - count = %d\n", i, L1_mem[i]);
+//	}
 
 /* Cluster Stop - Power down */
 	CLUSTER_Stop(0);
@@ -115,10 +116,10 @@ int main()
 }
 
 
-void Usage (char* prog_name) {
+/*void Usage (char* prog_name) {
    fprintf(stderr, "usage: %s <thread_count>\n", prog_name);
    exit(0);
-}  /* Usage */
+}*/  /* Usage */
 
 void Read_matrix(char* prompt, double A[], int m, int n) {
    int             i, j;
